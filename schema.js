@@ -3,7 +3,6 @@ const schema = mongoose.Schema;
 
 const productSchema = new schema({
 
-  //First example
   title: {type: String},
   link: {type: String},
   description: {type: String},
