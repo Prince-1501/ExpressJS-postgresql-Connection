@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node-dev index.js",
     "migrate": "knex migrate:latest",
     "unmigrate": "knex migrate:rollback"
   },
@@ -16,6 +16,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.1",
+    "mongoose": "^5.9.28",
+    "node-dev": "^5.1.0",
     "pg": "^8.2.1"
   }
 }

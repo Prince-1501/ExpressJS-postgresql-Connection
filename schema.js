@@ -17,7 +17,7 @@ const productSchema = new schema({
     availability: {type: String},
     price: {type: Number},
     shipping: {
-      0:{
+      details:{
         country: {type: String},
         service: {type: String},
         price: {type: String}
@@ -49,4 +49,6 @@ const productSchema = new schema({
 
 });
 
-module.exports = mongoose.model("productModel", productSchema);
+const Product = mongoose.model('productModel',productSchema)
+
+module.exports = Product

@@ -1,0 +1,47 @@
+{
+
+  "title": "title",
+  "link": "link",
+  "description": "desc",
+
+  "item":{
+    "id": "id",
+    "title": "itemtitle",
+    "description": "itemdesc",
+    "link": "itemlink",
+    "image_link": "imagelnk",
+    "condition": "conditon",
+    "availability": "avability",
+    "price": "price",
+    "shipping": {
+      "details":{
+        "country": "",
+        "service": "",
+        "price": ""
+      }
+    },
+
+    "gtin": "",
+    "brand": "",
+    "mpn": "",
+
+    "google_product_category": "",
+    "product_type": "",
+    "brand": "",
+    "gender": "",
+    "age_group": "",
+    "color": "",
+    "size": "",
+
+    "item_group_id": "",
+
+    "sale_price":" {}",
+    "sale_price_effective_date": "",
+
+    "additional_image_link":{
+      "details":{ "additional_image_link": ""
+    }
+
+  }
+
+}

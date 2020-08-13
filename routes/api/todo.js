@@ -1,20 +1,26 @@
 const express  = require('express');
 const router = express.Router();
-const db = require('./../../database/index');
+const Product = require('../../schema')
 
-router.get('/',(req,res)=>{
-  //res.send('hello prince')
-  db.select().from('country').then((data)=>res.send(data))
+
+router.get('/',async (req,res)=>{
+	const data = await Product.find({})
+	res.send(data)
+	
 });
 
 
+
 // For POST request you can use POSTMAN and send the req body via KEY VALUE pair
-router.post('/',(req, res)=>{
-  db.insert(req.body).returning('*').into('country').then((data) => {
-    res.send(data);
-  })
-  //console.log(req.body);
-  //return res.send(req.body);
+router.post('/',async (req, res)=>{
+	const data = req.body
+    const product = new Product({
+		...data
+    })
+    console.log(data)
+    res.sendStatus(200)
+  const dataSaved = await product.save()
+  console.log("prodct saved !")
 });
 
 
